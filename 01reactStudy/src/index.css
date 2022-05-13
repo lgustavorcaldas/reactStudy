@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+*{
+    font-family: 'Jockey One', sans-serif;
+}
+body{
+    margin: 0 auto;
+    background-color: #E7E7E7;
+}
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #0ACD86;
+    width: 100%;    
+}
+.header{
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1100px;
+}
+    .header ul{
+        font-size: 23px;
+        color: #0AAB6B;
+        width: 750px;
+        display: flex; 
+        align-items: center;
+        justify-content: space-between;
+    }
+        .header il input{
+            border: 0;
+            background-color: white;
+            color: #0AAB6B;
+            width: 150px;
+            height: 40px;
+            border-radius: 50px;
+            font-size: 23px;
+        }
+            .header il input:hover{
+                background-color: #eeeeee;
+                transform: scale(110%);
+                color: #0ACD86;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+.whiteBox{
+    margin: 160px;
+    display: flex; 
+    justify-content: center;
+}
+.whiteBox span{
+    height: 650px;
+    width: 1100px;
+    background-color: white;
+}
+footer{
+    text-align: center;
+}
