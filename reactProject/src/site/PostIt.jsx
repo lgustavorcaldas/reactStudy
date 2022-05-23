@@ -4,9 +4,9 @@ import { BsFillTrashFill } from 'react-icons/bs';
 
 export default function PostIt( props ) {
   return (
-    <div className="postIt">
+    <div className={"postIt"}>
         <div>
-            <p>Descrição</p>
+            <p>Titulo</p>
             <span> {props.desc} </span>
         </div>
         <div>
@@ -14,8 +14,8 @@ export default function PostIt( props ) {
             <span> {props.date} </span>
         </div>
         <div className="icon">
-            <BsFillTrashFill className=" trash" onClick={ () => props.removeTask( props.index ) }/>
-            <MdModeEditOutline className="edit" onClick={ () => props.editTask( props.index ) } />
+            <BsFillTrashFill className=" trash" onClick={ () => props.removePostIt( props.index ) }/>
+            <MdModeEditOutline className="edit" onClick={ () => props.editPostIt( props.index ) } />
         </div>
     </div>
   )

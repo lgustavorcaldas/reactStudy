@@ -3,7 +3,7 @@ import Header from "./site/Header";
 
 export function App() {
 	return (  
-		<div>
+		<div className="container">
 			<Header />
 			<Inputs />
 		</div>
