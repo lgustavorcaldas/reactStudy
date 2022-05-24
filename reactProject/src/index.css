@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.inputsToDo{
+    width: 1000px;
+    background-color: bisque;
+    text-align: center;
+}
+.header{
+    width: 1000px;
+    background-color: rgb(207, 207, 207);
+    color: #b4351c;
+    text-align: center;
+}
+.whiteBoard{
+    width: 1000px;
+    background-color: #dddddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.toDoList{
+    display: flex;
+    height: 500px;
+    width: 1000px;
+    text-align: center;
+    justify-content: space-around;
+    background-color: #bec4c9;
+}
+.postIt{
+    padding-top: 10px;
+    background-color: antiquewhite;
+    height: 155px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+}
+.postIt .icon{
+    display: flex;
+    width: 250px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+.postIt p{
+    margin: 0;
+    font-weight: bold;
+}
+.DivToDo .postIt{
+    background-color: lightgoldenrodyellow;
+}
+.DivDoing .postIt{
+    background-color: lightcyan;
+}
+.DivDone .postIt{
+    background-color: lightcoral;
+}
