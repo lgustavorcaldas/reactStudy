@@ -34,7 +34,7 @@ const Inputs = () => {
     setNewFormToDo( { yourTask: "", date: "", state: "" } );
     console.log(formTodo);
   }
-  
+
   function editPostIt( index ) {
     setNewFormToDo( formTodo[ index ] )
     removePostIt( index );
@@ -42,11 +42,10 @@ const Inputs = () => {
 
   function removePostIt( index ) {
     let removedPostIt = formTodo.filter( ( postIt, i ) => {
-        return i != index; 
+        return i !== index; 
     })
     setFormToDo( removedPostIt )
   }
-    
 
   return (
     <div>
@@ -71,15 +70,24 @@ const Inputs = () => {
           <div className='toDoList'>
               <div className='DivToDo'>
                 <h3>A Fazer</h3>
-                { formTodo.map( ( auxPostIt, index ) => { if ( auxPostIt.state === "toDo" ) return <PostIt desc={ auxPostIt.yourTask } date={ auxPostIt.date }  removePostIt={ removePostIt } editPostIt={ editPostIt } index={ index } key={ index } /> }) }
+                { 
+                  formTodo.map( ( auxPostIt, index ) => { 
+                    if ( auxPostIt.state === "toDo" ) return <PostIt desc={ auxPostIt.yourTask } date={ auxPostIt.date }  removePostIt={ removePostIt } editPostIt={ editPostIt } index={ index } key={ index } /> 
+                })}
               </div>
               <div className='DivDoing'>
                   <h3>Fazendo</h3>
-                { formTodo.map( ( auxPostIt, index ) => { if ( auxPostIt.state === "doing" ) return <PostIt desc={ auxPostIt.yourTask } date={ auxPostIt.date }  removePostIt={ removePostIt } editPostIt={ editPostIt } index={ index } key={ index } /> }) }
+                { 
+                  formTodo.map( ( auxPostIt, index ) => { 
+                    if ( auxPostIt.state === "doing" ) return <PostIt desc={ auxPostIt.yourTask } date={ auxPostIt.date }  removePostIt={ removePostIt } editPostIt={ editPostIt } index={ index } key={ index } /> 
+                })}
               </div>
               <div className='DivDone'>
                   <h3>Finalizado</h3>
-                { formTodo.map( ( auxPostIt, index ) => { if ( auxPostIt.state === "done" ) return <PostIt desc={ auxPostIt.yourTask } date={ auxPostIt.date }  removePostIt={ removePostIt } editPostIt={ editPostIt } index={ index } key={ index } /> }) }
+                { 
+                  formTodo.map( ( auxPostIt, index ) => { 
+                    if ( auxPostIt.state === "done" ) return <PostIt desc={ auxPostIt.yourTask } date={ auxPostIt.date }  removePostIt={ removePostIt } editPostIt={ editPostIt } index={ index } key={ index } /> 
+                })}
               </div>
           </div>
       </section>
