@@ -1,22 +1,23 @@
 import React from 'react'
+import { PostItStyle } from "./style"
 import { MdModeEditOutline } from 'react-icons/md';
 import { BsFillTrashFill } from 'react-icons/bs';
 
 export default function PostIt( props ) {
   return (
-    <div className={"postIt"}>
-        <div>
-            <p>Titulo</p>
+    <PostItStyle className={props.class}>
+        <div className='descPostIt'>
+            <p>Descrição</p>
             <span> {props.desc} </span>
         </div>
-        <div>
+        <div className='datePostIt'>
             <p>Prazo</p>
             <span> {props.date} </span>
         </div>
         <div className="icon">
-            <BsFillTrashFill className=" trash" onClick={ () => props.removePostIt( props.index ) }/>
             <MdModeEditOutline className="edit" onClick={ () => props.editPostIt( props.index ) } />
+            <BsFillTrashFill className=" trash" onClick={ () => props.removePostIt( props.index ) }/>
         </div>
-    </div>
+    </PostItStyle>
   )
 }
